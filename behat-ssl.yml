@@ -3,7 +3,7 @@ default:
     Behat\MinkExtension:
       base_url: https://apache24
       sessions:
-        default:
+        my_session:
           goutte:
             guzzle_parameters:
               verify: false
