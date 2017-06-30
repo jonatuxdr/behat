@@ -2,4 +2,10 @@ default:
   extensions:
     Behat\MinkExtension:
       base_url: https://apache24
-      goutte: ~
+      goutte:
+        guzzle_parameters:
+          curl.options:
+            CURLOPT_SSL_VERIFYPEER: false
+            CURLOPT_CERTINFO: false
+            CURLOPT_TIMEOUT: 120
+          ssl.certificate_authority: false
