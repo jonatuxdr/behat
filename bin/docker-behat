@@ -1,0 +1,5 @@
+#!/bin/bash
+
+apache2-foreground &>/dev/null &disown
+/app/vendor/bin/behat -c /app/behat.yml --colors
+
