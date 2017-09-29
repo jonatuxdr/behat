@@ -1,1 +1,14 @@
 SetEnv PHP_VALUE "post_max_size = 1234M"
+
+<IfModule mod_php5.c>
+  Define MOD_PHP_IS_ENABLED
+</IfModule>
+
+<IfModule mod_php7.c>
+    Define MOD_PHP_IS_ENABLED
+</IfModule>
+
+<IfDefine !PHP_IS_ENABLED>
+  php_value post_max_size 1234M
+</IfDefine>
+
